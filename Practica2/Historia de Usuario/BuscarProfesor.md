@@ -1,0 +1,1 @@
+## (ANVERSO)**ID:** 011 **Buscar Profesor**----El sistema realiza una búsqueda de un profesor por el DNI.**Prioridad:** 1  ----## (REVERSO)----* El sistema recoge los datos del profesor buscado.  ----

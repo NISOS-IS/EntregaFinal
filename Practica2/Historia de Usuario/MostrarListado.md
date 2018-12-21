@@ -1,0 +1,1 @@
+## (ANVERSO)**ID:** 005 **Mostrar Listado**----Muestra el listado de todos los alumnos, mostrando también toda la información guardada de ellos.**Prioridad:** 1  ----## (REVERSO)----* Muestra el listado de alumnos por pantalla.  * Muestra un mensaje si la agenda está vacía.  ----

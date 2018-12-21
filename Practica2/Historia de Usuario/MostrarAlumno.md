@@ -1,0 +1,1 @@
+## (ANVERSO)**ID:** 006 **Mostrar Alumno**----El profesor podrá ver toda la información de un alumno o varios buscando por el DNI, los Apellidos o el número de equipo.**Prioridad:** 2  ----## (REVERSO)----* Muestra todos los datos de uno o varios alumnos, indicando el criterio de búsqueda que desea, por DNI, Apellidos o Equipo.  ----

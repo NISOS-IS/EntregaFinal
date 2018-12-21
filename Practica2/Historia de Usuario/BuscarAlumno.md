@@ -1,0 +1,1 @@
+## (ANVERSO)**ID:** 001 **Buscar Alumno**----El profesor puede consultar uno o varios alumnos de la Agenda, introduciendo en el sistema el DNI, el Apellido o el número del equipo al que pertenece.**Prioridad:** 1  ----## (REVERSO)----* El sistema recoge los datos del alumno/s buscado/s.* Muestra un mensaje de error si el alumno/s no ha sido encontrado.----
