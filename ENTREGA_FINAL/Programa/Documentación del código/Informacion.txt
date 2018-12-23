@@ -1,0 +1,1 @@
+Para poder visualizar la documentación del código, en la carpeta html hay que buscar el archivo index.html

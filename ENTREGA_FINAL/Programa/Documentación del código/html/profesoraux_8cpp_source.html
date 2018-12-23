@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Agenda de Alumnos: Fichero Fuente profesoraux.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Agenda de Alumnos
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">profesoraux.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;profesoraux.h&quot;</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keywordtype">bool</span> compruebaRol(<a class="code" href="classProfesor.html">Profesor</a> usuarioAux){</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    ifstream file(<span class="stringliteral">&quot;iniciosesion.bin&quot;</span>, ios::in | ios::binary);</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keywordtype">bool</span> correcto = <span class="keyword">false</span>;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keywordtype">string</span> auxiliar;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="structRegUsu.html">RegUsu</a> aux;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordflow">if</span>(file.is_open()){</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keywordflow">while</span>(!file.eof()){</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;            file.read((<span class="keywordtype">char</span>*) &amp;aux, <span class="keyword">sizeof</span>(<a class="code" href="structRegUsu.html">RegUsu</a>));</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;            <span class="keywordflow">if</span>(aux.usuario == usuarioAux.getUsuario()){</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                auxiliar=aux.<a class="code" href="structRegUsu.html#aac4cd127dd485aa5810729eddb8af5e3">rol</a>;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                <span class="keywordflow">if</span>(auxiliar == <span class="stringliteral">&quot;Ayudante&quot;</span>){</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                    correcto = <span class="keyword">true</span>;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                }</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            }<span class="keywordflow">else</span>{</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                correcto=<span class="keyword">false</span>;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            }</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        }</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        file.close();</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">return</span> correcto;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div><div class="ttc" id="structRegUsu_html"><div class="ttname"><a href="structRegUsu.html">RegUsu</a></div><div class="ttdoc">Estructura que con variables de tipo char e int que nos servirá para poder trabajar con los ficheros ...</div><div class="ttdef"><b>Definition:</b> <a href="funcionesAux_8h_source.html#l00057">funcionesAux.h:57</a></div></div>
+<div class="ttc" id="classProfesor_html"><div class="ttname"><a href="classProfesor.html">Profesor</a></div><div class="ttdef"><b>Definition:</b> <a href="profesor_8h_source.html#l00017">profesor.h:17</a></div></div>
+<div class="ttc" id="structRegUsu_html_aac4cd127dd485aa5810729eddb8af5e3"><div class="ttname"><a href="structRegUsu.html#aac4cd127dd485aa5810729eddb8af5e3">RegUsu::rol</a></div><div class="ttdeci">char rol[15]</div><div class="ttdoc">Variable para el Rol. </div><div class="ttdef"><b>Definition:</b> <a href="funcionesAux_8h_source.html#l00060">funcionesAux.h:60</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>
